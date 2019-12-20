@@ -1,4 +1,4 @@
-package com.example.aturgajian;
+package com.example.mbanking;
 
 
 import android.app.Dialog;
@@ -20,11 +20,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.example.aturgajian.adapter.KeuanganAdapter;
-import com.example.aturgajian.entities.Keuangan;
-import com.example.aturgajian.helper.SqliteHelper;
-import com.example.aturgajian.models.bank;
-import com.example.aturgajian.utils.RecyclerItemClickListener;
+import com.example.mbanking.adapter.KeuanganAdapter;
+import com.example.mbanking.entities.Keuangan;
+import com.example.mbanking.helper.SqliteHelper;
+import com.example.mbanking.models.bank;
+import com.example.mbanking.utils.RecyclerItemClickListener;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 

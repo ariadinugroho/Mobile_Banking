@@ -1,4 +1,4 @@
-package com.example.aturgajian;
+package com.example.mbanking;
 
 import android.app.DatePickerDialog;
 import android.database.Cursor;
@@ -18,9 +18,9 @@ import android.widget.Toast;
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.aturgajian.helper.SqliteHelper;
-import com.example.aturgajian.models.bank;
-import com.example.aturgajian.utils.DateFormat;
+import com.example.mbanking.helper.SqliteHelper;
+import com.example.mbanking.models.bank;
+import com.example.mbanking.utils.DateFormat;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

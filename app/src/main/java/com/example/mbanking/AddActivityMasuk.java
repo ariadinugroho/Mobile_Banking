@@ -1,4 +1,4 @@
-package com.example.aturgajian;
+package com.example.mbanking;
 
 import android.os.Bundle;
 
@@ -11,41 +11,41 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.blackcat.currencyedittext.CurrencyEditText;
-import com.example.aturgajian.entities.Keuangan;
-import com.example.aturgajian.helper.SqliteHelper;
-import com.example.aturgajian.models.bank;
+import com.example.mbanking.entities.Keuangan;
+import com.example.mbanking.helper.SqliteHelper;
+import com.example.mbanking.models.bank;
 
-public class AddActivityKeluar extends AppCompatActivity {
+
+public class AddActivityMasuk extends AppCompatActivity {
 
     CurrencyEditText edit_jumlah;
     EditText edit_keterangan;
     Button btn_simpan;
-
     public bank mAturGajian;
 
-    String status = "KELUAR";
+    String status = "MASUK";
     SqliteHelper sqliteHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_keluar);
+        setContentView(R.layout.activity_add);
         initData();
         sqliteHelper = new SqliteHelper(this);
 
-        edit_jumlah     = (CurrencyEditText) findViewById(R.id.edt_jumlah);
+        edit_jumlah = (CurrencyEditText) findViewById(R.id.edt_jumlah);
         edit_keterangan = (EditText) findViewById(R.id.edit_keterangan);
-        btn_simpan      = (Button) findViewById(R.id.btn_simpan);
+        btn_simpan = (Button) findViewById(R.id.btn_simpan);
 
         btn_simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (edit_jumlah.getText().toString().equals("")){
+                if (edit_jumlah.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "Isi data dengan benar",
                             Toast.LENGTH_LONG).show();
                 } else {
-
                     String keterangan = edit_keterangan.getText().toString();
+
 
                     Keuangan keuanganBaru = new Keuangan();
                     keuanganBaru.setStatus(status);
@@ -53,7 +53,6 @@ public class AddActivityKeluar extends AppCompatActivity {
                     keuanganBaru.setKeterangan(keterangan);
 
                     mAturGajian.insert(keuanganBaru);
-
                     Toast.makeText(getApplicationContext(), "Transaksi berhasil disimpan", Toast.LENGTH_LONG).show();
                     finish();
                 }
@@ -61,14 +60,14 @@ public class AddActivityKeluar extends AppCompatActivity {
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Withdraw");
+        getSupportActionBar().setTitle("Pemasukan");
 
     }
     private void initData() {
         this.mAturGajian = new bank(this);
     }
     @Override
-    public boolean onSupportNavigateUp(){
+    public boolean onSupportNavigateUp() {
         finish();
         return true;
     }

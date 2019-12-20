@@ -1,4 +1,4 @@
-package com.example.aturgajian.entities;
+package com.example.mbanking.entities;
 
 public class Keuangan {
     private int transaksi_id;

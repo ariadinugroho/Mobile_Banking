@@ -1,4 +1,4 @@
-package com.example.aturgajian;
+package com.example.mbanking;
 
 import org.junit.Test;
 

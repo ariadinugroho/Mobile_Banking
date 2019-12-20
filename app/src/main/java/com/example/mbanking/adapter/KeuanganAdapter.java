@@ -1,4 +1,4 @@
-package com.example.aturgajian.adapter;
+package com.example.mbanking.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,11 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.aturgajian.R;
-import com.example.aturgajian.entities.Keuangan;
+import com.example.mbanking.R;
+import com.example.mbanking.entities.Keuangan;
 
 import java.text.NumberFormat;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.aturgajian.utils;
+package com.example.mbanking.utils;
 
 import android.content.Context;
 import android.view.GestureDetector;

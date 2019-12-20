@@ -1,12 +1,11 @@
-package com.example.aturgajian.models;
+package com.example.mbanking.models;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.aturgajian.entities.Keuangan;
-import com.example.aturgajian.helper.SqliteHelper;
+import com.example.mbanking.entities.Keuangan;
+import com.example.mbanking.helper.SqliteHelper;
 
 import java.util.ArrayList;
 import java.util.List;
