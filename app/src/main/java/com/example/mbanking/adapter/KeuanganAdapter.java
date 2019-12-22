@@ -21,7 +21,7 @@ public class KeuanganAdapter extends RecyclerView.Adapter<KeuanganAdapter.MyView
     private List<Keuangan> transaksiList;
 
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder {
 
         public TextView tvTransaksi;
         public TextView tvKeterangan;
@@ -36,11 +36,10 @@ public class KeuanganAdapter extends RecyclerView.Adapter<KeuanganAdapter.MyView
             tvJumlah = view.findViewById(R.id.text_jumlah);
             tvStatus = view.findViewById(R.id.text_status);
             tvTanggal = view.findViewById(R.id.text_tanggal);
-
         }
     }
 
-    public KeuanganAdapter(Context context, List<Keuangan>noteslist){
+    public KeuanganAdapter(Context context, List<Keuangan> noteslist) {
         this.context = context;
         this.transaksiList = noteslist;
     }
@@ -49,7 +48,7 @@ public class KeuanganAdapter extends RecyclerView.Adapter<KeuanganAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_keuangan,parent,false);
+                .inflate(R.layout.item_keuangan, parent, false);
 
 
         return new MyViewHolder(itemView);
@@ -64,7 +63,7 @@ public class KeuanganAdapter extends RecyclerView.Adapter<KeuanganAdapter.MyView
 
         holder.tvTransaksi.setText(String.valueOf(keuangan.getId()));
         holder.tvKeterangan.setText(keuangan.getKeterangan());
-        holder.tvJumlah.setText("Rp."+rupiahFormat.format(keuangan.getJumlah()));
+        holder.tvJumlah.setText("Rp." + rupiahFormat.format(keuangan.getJumlah()));
         holder.tvStatus.setText(keuangan.getStatus());
         holder.tvTanggal.setText(keuangan.getDate());
 

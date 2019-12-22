@@ -6,6 +6,8 @@ public class Keuangan {
     private Long jumlah;
     private String keterangan;
     private String date;
+    private int from;
+    private int to;
 
     public int getId() {
         return transaksi_id;
